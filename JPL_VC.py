@@ -14,6 +14,11 @@ if mode == "Plain Text":
     if text_data:
         # Split text into a list of lines, removing empty lines
         file_lines = [line.strip() for line in text_data.splitlines() if line.strip()]
+    if st.button("Process Text"):
+        if text_data:
+            file_lines = [line.strip() for line in text_data.splitlines() if line.strip()]
+        else:
+            st.warning("Please paste some text first!")
 else:
     uploaded_file = st.file_uploader("Upload your file", type=["txt"])
     if uploaded_file is not None:
