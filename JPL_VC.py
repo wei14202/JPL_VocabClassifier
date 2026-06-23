@@ -38,8 +38,8 @@ if file_lines:
         for tense in tenses:
             v_dict[tense] = [line for line in file_lines if tense in line]
     
-    v_dict["自动"] = [line for line in file_lines if "自动3" not in line]
-    v_dict["他动"] = [line for line in file_lines if "他动3" not in line]
+    v_dict["自动"] = [line for line in v_dict["自动"] if "自动3" not in line]
+    v_dict["他动"] = [line for line in v_dict["他动"] if "他动3" not in line]
 
     a = list(zip_longest(*v_dict.values(), fillvalue=""))
     df = pd.DataFrame(a, columns=v_dict.keys())
