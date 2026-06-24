@@ -2,7 +2,7 @@ import pandas as pd
 from itertools import zip_longest
 import streamlit as st
 
-tenses = ["自动", "他动", "自动3", "他动3", "接尾词", "副词", "助词"]
+tenses = ["自动", "他动", "自动3", "他动3", "接尾词","接续词" "副词", "助词"]
 
 # 1. Choose input mode
 mode = st.selectbox("Input mode", ["Plain Text", ".txt File"])
